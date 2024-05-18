@@ -1,0 +1,176 @@
+### Student register
+POST http://localhost:8080/api/v1/auth/profile/registration
+Content-Type: application/json
+Accept-Language: uz
+
+{
+  "name": "Ruzibek",
+  "surname": "Kholmuminov",
+  "phoneNumber": "998930671423",
+  "password": "123456",
+  "login": "ruzibekk",
+  "gender": "MALE"
+}
+
+
+#### Student register 2
+#POST http://api.app.mazgi.uz/api/v1/auth/profile/registration
+#Content-Type: application/json
+#
+#{
+#  "name": "Bilolchik",
+#  "surname": "To'xtamurodov",
+#  "phoneNumber": "998930671423",
+#  "password": "123456",
+#  "nickName": "bilolchik",
+#  "countryId": 1,
+#  "address": "Toshkent viloyati",
+#  "gender": "MALE"
+#}
+#
+#
+### Student sms verification
+POST http://localhost:8080/api/v1/auth/profile/registration/verification
+Content-Type: application/json
+Accept-Language: uz
+
+{
+  "phone": "998930671423",
+  "code": "28234"
+}
+
+#### Student (Profile) login
+POST http://localhost:8080/api/v1/auth/profile/login
+Content-Type: application/json
+Accept-Language: uz
+
+{
+  "phone": "998930671423",
+  "password": "123456"
+}
+
+#### Admin (Profile) login
+POST http://localhost:8080/api/v1/auth/profile/login
+Content-Type: application/json
+
+{
+  "phone": "998930671423",
+  "password": "123456"
+}
+
+#### Reset password for profile
+#POST http://localhost:8081/api/v1/auth/profile/reset-password
+#Content-Type: application/json
+#
+#{
+#  "phone": "998997795710"
+#}
+#
+#### Reset password confirm for profile
+#PUT http://localhost:8081/api/v1/auth/profile/reset/confirm
+#Content-Type: application/json
+#
+#{
+#  "phone": "998997795710",
+#  "smsCode": "71824",
+#  "newPassword": "123457",
+#  "repeatNewPassword": "123457"
+#}
+#
+#
+################################################# Consulting
+#### Consulting login 1
+#POST http://api.app.mazgi.uz//api/v1/auth/consulting/login
+#Content-Type: application/json
+#
+#{
+#  "phone": "998915721213",
+#  "password": "3w3csl"
+#}
+#
+#### Consulting login 2
+#POST http://localhost:8085/api/v1/auth/consulting/login
+#Content-Type: application/json
+#
+#{
+#  "phone": "998915721213",
+#  "password": "3w3csl"
+#}
+#
+#### Consulting login 3
+#POST http://localhost:8081/api/v1/auth/consulting/login
+#Content-Type: application/json
+#
+#{
+#  "phone": "998997795710",
+#  "password": "3w3csl"
+#}
+#
+#### Consulting login PROD
+#POST http://localhost:8085/api/v1/auth/consulting/login
+#Content-Type: application/json
+#
+#{
+#  "phone": "998915721217",
+#  "password": "123456"
+#}
+#
+#### Consulting login DEV
+#POST http://api.app.mazgi.uz/api/v1/auth/consulting/login
+#Content-Type: application/json
+#
+#{
+#  "phone": "998997795710",
+#  "password": "b6jcay"
+#}
+#
+#### Reset password for consulting
+#POST http://localhost:8081/api/v1/auth/consulting/reset-password
+#Content-Type: application/json
+#
+#{
+#  "phone": "998997795710"
+#}
+#
+#### Reset password confirm for consulting
+#PUT http://localhost:8081/api/v1/auth/consulting/reset/confirm
+#Content-Type: application/json
+#
+#{
+#  "phone": "998997795710",
+#  "smsCode": "66331",
+#  "newPassword": "123457",
+#  "repeatNewPassword": "123457"
+#
+#}
+#
+#
+#
+################################################# Admin
+#### authenticate ADMIN
+#POST http://localhost:8085/api/v1/auth/profile/login
+#Content-Type: application/json
+#
+#{
+#  "phone": "998938080831",
+#  "password": "123456"
+#}
+#
+#### PROD authenticate ADMIN
+#POST https://api.scolaroconsult.uz/api/v1/auth/profile/login
+#Content-Type: application/json
+#
+#{
+#  "phone": "998938080831",
+#  "password": "123456"
+#}
+#
+#
+################################################# Other
+#### Exist Profile NickName
+#GET http://localhost:8081/api/v1/auth
+#Content-Type: application/json
+#
+#{
+#  "nickName" : "maxmud123"
+#}
